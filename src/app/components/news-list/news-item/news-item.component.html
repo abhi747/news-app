@@ -1,0 +1,20 @@
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-3">
+                <img [src]="newsItem.urlToImage" class="img-fluid">
+            </div>
+            <div class="col-7">
+                <h4>{{newsItem.title}}</h4>
+                <p class="text-secondary">
+                    <span *ngIf="newsItem.author" >by {{newsItem.author}}</span>
+                    <span *ngIf="newsItem.publishedAt">
+                        <span *ngIf="newsItem.author"> | </span>
+                        {{newsItem.publishedAt | date :'short'}}
+                    </span>
+                </p>
+                <p>{{newsItem.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,10 @@
 * {
     font-family: 'Roboto';
 }
-
+.row {
+    min-height: 180px;
+    position: relative;
+}
 .title {
     font-weight: 400;
 }
@@ -23,6 +26,8 @@
 
 .reflink {
     font-size: 10px;
+    position: absolute;
+    bottom: 0px;
 }
 
 .metadata {

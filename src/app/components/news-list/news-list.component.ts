@@ -13,7 +13,7 @@ export class NewsListComponent implements OnInit {
   constructor( private _newsService: NewsService) { }
 
   ngOnInit() {
-      this._newsService.getTopHeadLines('business','in').subscribe(
+      this._newsService.getTopHeadLines('','in').subscribe(
         (newsList: News) => this.newsList = newsList,
         (err) => console.error(err)
       )

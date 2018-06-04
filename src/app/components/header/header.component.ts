@@ -10,13 +10,13 @@ import { NewsService } from '../../services/news.service'
 export class HeaderComponent implements OnInit {
 
     categoryList = ['Business','Entertainment','General','Health','Science','Sports','Technology'];
-    constructor(private service: NewsService) { }
+    constructor(private _newService: NewsService) { }
 
   ngOnInit() {
   }
 
     changeCategory(cat: string) {
-        this.service.changeCategory(cat);
+        this._newService.changeCategory(cat);
     }
 
 }

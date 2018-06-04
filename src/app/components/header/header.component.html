@@ -1,12 +1,5 @@
-<!-- <div class="container-fluid fixed">
-    <div class="row">
-        <h2 class="container col-5">The Times</h2>
-    </div>
-</div> -->
-
-
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-    <a class="navbar-brand" href="#">The Times</a>
+    <a class="navbar-brand" href="javascript:void(0)" (click)="changeCategory('')">The Times</a>
     <ul class="navbar-nav">
         <li class="nav-item" *ngFor="let cat of categoryList">
             <a class="nav-link" href="javascript:void(0)" (click)="changeCategory(cat)">{{cat}}</a>

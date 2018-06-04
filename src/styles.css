@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,3 +21,4 @@ time, mark, audio, video {
 	/* font-size: 100%; */
 	vertical-align: baseline;
 }
+

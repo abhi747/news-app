@@ -4,15 +4,18 @@
                 <div [style.backgroundImage]="'url('+ newsItem.urlToImage +')'" *ngIf="newsItem.urlToImage" class="img"></div>
             </div>
             <div class="col-9">
-                <h6>{{newsItem.title}}</h6>
-                <small class="text-secondary">
+                <h6 class="title">{{newsItem.title}}</h6>
+                <p class="metadata">
                     <span *ngIf="newsItem.author" >by {{newsItem.author}}</span>
                     <span *ngIf="newsItem.publishedAt">
                         <span *ngIf="newsItem.author"> | </span>
                         {{newsItem.publishedAt | date :'short'}}
                     </span>
-                </small>
+                </p>
                 <p class="desc">{{newsItem.description}}</p>
+                <p class="reflink mt-3">
+                    <i>Read more at <a [href]="newsItem.url" target="_blank">{{newsItem.source.name}}</a></i>
+                </p>
             </div>
         </div>
     </li>

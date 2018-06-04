@@ -10,12 +10,21 @@ import { News } from '../../interfaces/news';
 export class NewsListComponent implements OnInit {
 
   newsList: News;
-  constructor( private _newsService: NewsService) { }
+  constructor( private _newsService: NewsService) {
+      _newsService.categoryChangeListener.subscribe((data) => {
+          console.log('_newsService.categoryChangeListener ---> ', data);
+          this.getNews(data.category);
+      });
+   }
 
   ngOnInit() {
-      this._newsService.getTopHeadLines('','in').subscribe(
-        (newsList: News) => this.newsList = newsList,
-        (err) => console.error(err)
+      this.getNews('');
+  }
+
+  getNews(cat){
+      this._newsService.getTopHeadLines(cat, 'in').subscribe(
+          (newsList: News) => this.newsList = newsList,
+          (err) => console.error(err)
       )
   }
 

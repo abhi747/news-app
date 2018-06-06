@@ -10,6 +10,7 @@ import { News } from '../../interfaces/news';
 export class NewsListComponent implements OnInit {
 
   newsList: News;
+  p: number = 1;
   constructor( private _newsService: NewsService) {
       _newsService.categoryChangeListener.subscribe((data) => {
           console.log('_newsService.categoryChangeListener ---> ', data);

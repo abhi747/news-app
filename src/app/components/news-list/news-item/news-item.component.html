@@ -1,7 +1,11 @@
 <li class="list-group-item mb-3">
         <div class="row">
             <div class="col-3 card-img">
-                <div [style.backgroundImage]="'url('+ newsItem.urlToImage +')'" *ngIf="newsItem.urlToImage" class="img"></div>
+                <div [style.backgroundImage]="'url('+ newsItem.urlToImage +')'" *ngIf="newsItem.urlToImage; else blankimage" class="img">
+                </div>
+                <ng-template #blankimage>
+                    <div [style.backgroundImage]="'url(../../assets/images/blank.jpeg)'" class="img"></div>
+                </ng-template>
             </div>
             <div class="col-9">
                 <h6 class="title">{{newsItem.title}}</h6>

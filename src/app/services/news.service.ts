@@ -13,12 +13,14 @@ export class NewsService {
 
   constructor( private _http: HttpClient ) { }
 
-    getTopHeadLines(category: string, country: string): Observable<News> {
+    getTopHeadLines(category: string, page: string, pageSize: string, country: string): Observable<News> {
         const url = `https://newsapi.org/v2/top-headlines`;
         let headers = new HttpHeaders({'X-Api-Key': environment.apiKey});
         let params = new HttpParams().set('language', 'en')
                     .append('category', category)
-                    .append('country', country);
+                    .append('country', country)
+                    .append('page', page)
+                    .append('pageSize', pageSize);
         return this._http.get<News>(url, {headers: headers,params: params});
     }
     getCategorizedNews(): Observable<News> {

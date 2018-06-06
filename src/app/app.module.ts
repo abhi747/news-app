@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/header/navbar/navbar.component';
 import { NewsListComponent } from './components/news-list/news-list.component';
 import { NewsItemComponent } from './components/news-list/news-item/news-item.component';
 import { NewsService } from './services/news.service';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NewsService } from './services/news.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

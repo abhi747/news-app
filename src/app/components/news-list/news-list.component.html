@@ -1,6 +1,9 @@
 <ul class="container mgtp list-group col-5">
-    <div *ngFor = "let newsItem of newsList?.articles">
+    <div *ngFor = "let newsItem of newsList?.articles | paginate: { itemsPerPage: 5, currentPage: p }">
         <app-news-item [newsItem]="newsItem"></app-news-item>
+    </div>
+    <div class="pg">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </div>
 </ul>
 

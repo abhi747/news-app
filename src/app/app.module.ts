@@ -9,6 +9,7 @@ import { NewsListComponent } from './components/news-list/news-list.component';
 import { NewsItemComponent } from './components/news-list/news-item/news-item.component';
 import { NewsService } from './services/news.service';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxSpinnerModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]

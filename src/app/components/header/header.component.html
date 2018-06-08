@@ -1,8 +1,29 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+<!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
     <a class="navbar-brand" href="javascript:void(0)" (click)="changeCategory('')">The Times</a>
     <ul class="navbar-nav">
         <li class="nav-item" *ngFor="let cat of categoryList">
             <a class="nav-link" href="javascript:void(0)" (click)="changeCategory(cat)">{{cat}}</a>
         </li>
     </ul>
+</nav> -->
+
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <!-- Brand -->
+    <a class="navbar-brand" href="javascript:void(0)" (click)="changeCategory('')">The Times</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item" *ngFor="let cat of categoryList">
+                <a class="nav-link" href="javascript:void(0)" (click)="changeCategory(cat)">{{cat}}</a>
+            </li>
+        </ul>
+    </div>
 </nav>
+

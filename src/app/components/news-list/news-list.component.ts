@@ -17,7 +17,6 @@ export class NewsListComponent implements OnInit {
     constructor(private _newsService: NewsService, private spinner: NgxSpinnerService) {
       _newsService.categoryChangeListener.subscribe((data) => {
           this.p = 1; //reset page index to 1 on category change
-          console.log('_newsService.categoryChangeListener ---> ', data);
           this.cat = data.category;
           this.getNews(this.cat,1);
       });

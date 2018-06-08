@@ -38,6 +38,7 @@ export class NewsListComponent implements OnInit {
               this.spinner.hide();
           }
       )
+
   }
 
 }

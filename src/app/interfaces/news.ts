@@ -1,5 +1,5 @@
 export interface News {
     status: string,
-    totalResults: string,
+    totalResults: number,
     articles: any[]
 }

@@ -20,7 +20,7 @@ export class NewsService {
                     .append('category', category)
                     .append('country', country)
                     .append('page', page.toString())
-                    .append('pageSize', "5");
+                    .append('pageSize', "7");
         return this._http.get<News>(url, {headers: headers,params: params});
     }
     getCategorizedNews(): Observable<News> {

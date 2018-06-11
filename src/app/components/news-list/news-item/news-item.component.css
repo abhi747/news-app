@@ -1,10 +1,10 @@
 * {
     font-family: 'Roboto';
 }
-.row {
+/* .row {
     min-height: 180px;
     position: relative;
-}
+} */
 .title {
     font-weight: 400;
 }
@@ -35,3 +35,18 @@
      color: gray;
      margin-top: 3px;
 }
+
+@media only screen and (max-width: 768px) {
+    .card-img {
+        min-height: 200px;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* .row {
+        min-height: 180px;
+        position: relative;
+    } */
+}
+

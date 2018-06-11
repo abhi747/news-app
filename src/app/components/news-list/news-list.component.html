@@ -1,4 +1,4 @@
-<ul class="container mgtp list-group col-12 col-md-5">
+<ul class="container mgtp list-group col-md-8 col-lg-6">
     <div *ngFor = "let newsItem of newsList?.articles |
                     paginate: { itemsPerPage: 5, currentPage: p, totalItems: 20 }">
         <app-news-item [newsItem]="newsItem"></app-news-item>

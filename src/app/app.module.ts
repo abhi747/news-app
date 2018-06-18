@@ -18,7 +18,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     HeaderComponent,
     NavbarComponent,
     NewsListComponent,
-    NewsItemComponent
+    NewsItemComponent,
   ],
   imports: [
     BrowserModule,
